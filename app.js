@@ -5,6 +5,7 @@ const btnR = document.getElementById('res-btn');
 const tooHigh = document.getElementById('too-high');
 const tooLow = document.getElementById('too-low');
 const outDiv = document.getElementById('results');
+const winDiv = document.getElementById('win-div');
 // initialize state
 let win = 0;
 let loss = 0;
@@ -27,9 +28,14 @@ btn.addEventListener('click', () =>{
         tooLow.style.display = 'block';
         tooHigh.style.display = 'none';
     }
+    if (guessN === num){
+        tooLow.style.display = 'none';
+        tooHigh.style.display = 'none';
+        winDiv.style.display = 'block';
+    }
     console.log(win, loss);
     console.log(num);
-    outDiv.textContent = `You've gotten the correct anwser ${win} / ${loss}`;
+    outDiv.textContent = `You've gotten ${win} / ${loss} right!`;
 });
 
 btnR.addEventListener('click', () =>{
