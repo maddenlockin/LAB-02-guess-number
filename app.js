@@ -9,13 +9,12 @@ const outDiv = document.getElementById('results');
 let win = 0;
 let loss = 0;
 
-
 // set event listeners to update state and DOM
 btn.addEventListener('click', () =>{
     let num = Math.ceil(Math.random() * 20);
     const guess = document.getElementById('num-input').value;
     const guessN = Number(guess);
-    if (checkNumber(guessN, num)){
+    if (checkNumber(guessN, num) === true){
         win++;
     } else {
         loss++;
@@ -28,7 +27,7 @@ btn.addEventListener('click', () =>{
     }
     console.log(win, loss);
     console.log(num);
-    outDiv.textContent = `Youve gotten the correct anwser ${win} / ${loss}`;
+    outDiv.textContent = `You've gotten the correct anwser ${win} / ${loss}`;
 });
 
 btnR.addEventListener('click', () =>{
