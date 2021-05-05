@@ -5,5 +5,4 @@ export function checkNumber(number, guess){
         return false;
     }
 }
-
-export function checkHigh
+// export function checkHigh
