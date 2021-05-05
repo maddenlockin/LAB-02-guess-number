@@ -21,9 +21,11 @@ btn.addEventListener('click', () =>{
     }
     if (guessN > num){
         tooHigh.style.display = 'block';
+        tooLow.style.display = 'none';
     }
     if (guessN < num){
         tooLow.style.display = 'block';
+        tooHigh.style.display = 'none';
     }
     console.log(win, loss);
     console.log(num);
