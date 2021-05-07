@@ -1,4 +1,3 @@
-// import functions and grab DOM elements
 import { checkNumber } from './func.js';
 const btn = document.getElementById('sub-btn');
 const btnR = document.getElementById('res-btn');
